@@ -29,10 +29,10 @@ Everything here is **NumPy only**, on purpose. Once you have written backward pa
 |---|---|---|---|
 | 1 | [From neurons to networks](01-from-neurons-to-networks.md) | The perceptron and XOR, multilayer perceptrons, activation functions, why nonlinearity matters, universal approximation, output layers and losses | ~3 h |
 | 2 | [Forward and backpropagation](02-forward-and-backpropagation.md) | Computational graphs, the chain rule on graphs, backprop derived in matrix form, the softmax plus cross-entropy gradient, gradient checking | ~4 h |
-| 3 | [A neural network in NumPy](03-neural-network-in-numpy.md) | Layer abstractions, a full mini-batch training loop, training on handwritten digits, visualizing what it learned, debugging a network that won't learn | ~4 h |
+| 3 | [A neural network in NumPy](03-neural-network-in-numpy.md) | Layer abstractions, a full mini-batch training loop, about 97% on handwritten digits, visualizing what it learned, debugging a network that won't learn | ~4 h |
 | 4 | [Optimizers](04-optimizers.md) | SGD, momentum and Nesterov, AdaGrad, RMSProp, Adam and AdamW, learning-rate schedules and warmup, an empirical comparison | ~3.5 h |
 | 5 | [Training deep networks](05-training-deep-networks.md) | Vanishing and exploding gradients, Xavier and He initialization, batch and layer normalization, dropout, weight decay, gradient clipping, residual connections, a debugging checklist | ~4 h |
-| 6 | [Autograd from scratch](06-autograd-from-scratch.md) | Reverse-mode automatic differentiation, a scalar autograd engine, topological sort, a tensor autograd engine, how PyTorch's autograd works | ~4 h |
+| 6 | [Autograd from scratch](06-autograd-from-scratch.md) | Reverse-mode automatic differentiation, a scalar autograd engine with topological sort, a tensor engine with broadcasting-aware gradients, how PyTorch's autograd works | ~4 h |
 
 Times include reading, running the code, and doing the exercises.
 
@@ -59,4 +59,4 @@ flowchart LR
 
 ## Capstone
 
-[**Build a tiny deep learning library with autograd, and train it to over 95% accuracy on digits.**](../../exercises/level-6-capstone.md) You'll write a tensor class with reverse-mode autograd, layers, a loss, and an optimizer. Then you'll train a network with it and beat 95% test accuracy on scikit-learn's handwritten digits, using no framework at all.
+[**Build a tiny deep learning library with autograd, and train it to over 95% accuracy on digits.**](../../exercises/level-6-capstone.md) You'll write a tensor class with reverse-mode autograd, layers, a fused cross-entropy loss, and the SGD and Adam optimizers, and prove every gradient correct with finite-difference checks. Then you'll train a network with it and beat 95% test accuracy on scikit-learn's handwritten digits, using no framework at all.

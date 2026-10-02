@@ -20,11 +20,6 @@ A hands-on handbook that takes you from basic Python to a deep understanding of 
 
 ## Three tiers, nine levels
 
-!!! info "Status"
-    The **Beginner and Intermediate tiers are complete**: Levels 0–5, 39 chapters with capstones. The Expert tier is being written, and its pages show what each chapter will cover.
-
-The handbook has **58 chapters** in nine levels, grouped into three tiers. Each tier has a clear goal and a checkpoint that tells you when you're ready for the next one.
-
 <div class="grid cards" markdown>
 
 -   :material-sprout:{ .lg .middle } **🌱 Beginner: Data Science Foundations**
