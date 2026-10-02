@@ -1,0 +1,220 @@
+site_name: The ML Handbook
+site_description: A hands-on guide to data science, machine learning, and deep learning, from your first DataFrame to transformers and diffusion models.
+site_url: https://jayanthappalla.com/ml-handbook/
+repo_url: https://github.com/astroboy1183/ml-handbook
+repo_name: astroboy1183/ml-handbook
+edit_uri: edit/main/docs/
+copyright: Written for learners. Derive it, code it, break it, and learn from it.
+
+theme:
+  name: material
+  language: en
+  icon:
+    logo: material/brain
+    repo: fontawesome/brands/github
+  favicon: assets/favicon.svg
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep purple
+      accent: amber
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep purple
+      accent: amber
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  font:
+    text: Inter
+    code: JetBrains Mono
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - navigation.indexes
+    - navigation.tracking
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+    - content.action.edit
+
+plugins:
+  - search
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.snippets
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+extra_javascript:
+  - assets/katex.js
+  - https://unpkg.com/katex@0.16.22/dist/katex.min.js
+  - https://unpkg.com/katex@0.16.22/dist/contrib/auto-render.min.js
+
+extra_css:
+  - https://unpkg.com/katex@0.16.22/dist/katex.min.css
+  - assets/extra.css
+
+nav:
+  - Home: index.md
+  - Start Here:
+      - How to use this handbook: start-here.md
+      - The full roadmap: roadmap.md
+      - Set up your environment: setup.md
+      - Progress checklist: progress.md
+  - Beginner:
+      - tiers/beginner.md
+      - "Level 0: Python for Data":
+          - chapters/00-python-for-data/index.md
+          - "The data landscape": chapters/00-python-for-data/01-the-data-landscape.md
+          - "Setting up your environment": chapters/00-python-for-data/02-environment-setup.md
+          - "Python essentials for data work": chapters/00-python-for-data/03-python-essentials.md
+          - "NumPy": chapters/00-python-for-data/04-numpy.md
+          - "pandas": chapters/00-python-for-data/05-pandas.md
+          - "Data visualization": chapters/00-python-for-data/06-visualization.md
+          - Capstone: exercises/level-0-capstone.md
+      - "Level 1: Math Foundations":
+          - chapters/01-math-foundations/index.md
+          - "Linear algebra": chapters/01-math-foundations/01-linear-algebra.md
+          - "Matrix decompositions": chapters/01-math-foundations/02-matrix-decompositions.md
+          - "Calculus and gradients": chapters/01-math-foundations/03-calculus-and-gradients.md
+          - "Probability": chapters/01-math-foundations/04-probability.md
+          - "Statistics": chapters/01-math-foundations/05-statistics.md
+          - "Information theory and optimization": chapters/01-math-foundations/06-information-theory-and-optimization.md
+          - Capstone: exercises/level-1-capstone.md
+      - "Level 2: Data Science Workflow":
+          - chapters/02-data-science-workflow/index.md
+          - "SQL and data acquisition": chapters/02-data-science-workflow/01-sql-and-data-acquisition.md
+          - "Data cleaning": chapters/02-data-science-workflow/02-data-cleaning.md
+          - "Exploratory data analysis": chapters/02-data-science-workflow/03-exploratory-data-analysis.md
+          - "Feature engineering": chapters/02-data-science-workflow/04-feature-engineering.md
+          - "Experimentation and A/B testing": chapters/02-data-science-workflow/05-experimentation-and-ab-testing.md
+          - "Communicating results": chapters/02-data-science-workflow/06-communicating-results.md
+          - Capstone: exercises/level-2-capstone.md
+  - Intermediate:
+      - tiers/intermediate.md
+      - "Level 3: ML Fundamentals":
+          - chapters/03-ml-fundamentals/index.md
+          - "What is machine learning?": chapters/03-ml-fundamentals/01-what-is-machine-learning.md
+          - "Linear regression": chapters/03-ml-fundamentals/02-linear-regression.md
+          - "Logistic regression and classification": chapters/03-ml-fundamentals/03-logistic-regression.md
+          - "Generalization and the bias-variance trade-off": chapters/03-ml-fundamentals/04-generalization-bias-variance.md
+          - "Regularization": chapters/03-ml-fundamentals/05-regularization.md
+          - "Evaluation metrics": chapters/03-ml-fundamentals/06-evaluation-metrics.md
+          - "Gradient descent in depth": chapters/03-ml-fundamentals/07-gradient-descent-in-depth.md
+          - Capstone: exercises/level-3-capstone.md
+      - "Level 4: ML Algorithms":
+          - chapters/04-ml-algorithms/index.md
+          - "k-nearest neighbors and naive Bayes": chapters/04-ml-algorithms/01-knn-and-naive-bayes.md
+          - "Decision trees": chapters/04-ml-algorithms/02-decision-trees.md
+          - "Ensembles: random forests and boosting": chapters/04-ml-algorithms/03-ensembles.md
+          - "Support vector machines": chapters/04-ml-algorithms/04-support-vector-machines.md
+          - "Clustering": chapters/04-ml-algorithms/05-clustering.md
+          - "Dimensionality reduction": chapters/04-ml-algorithms/06-dimensionality-reduction.md
+          - "Time series forecasting": chapters/04-ml-algorithms/07-time-series.md
+          - "Anomaly detection and recommender systems": chapters/04-ml-algorithms/08-anomaly-detection-and-recommenders.md
+          - Capstone: exercises/level-4-capstone.md
+      - "Level 5: Applied ML and MLOps":
+          - chapters/05-applied-ml/index.md
+          - "ML pipelines": chapters/05-applied-ml/01-ml-pipelines.md
+          - "Hyperparameter tuning": chapters/05-applied-ml/02-hyperparameter-tuning.md
+          - "Imbalanced data": chapters/05-applied-ml/03-imbalanced-data.md
+          - "Interpretability": chapters/05-applied-ml/04-interpretability.md
+          - "ML in production": chapters/05-applied-ml/05-ml-in-production.md
+          - "Responsible ML": chapters/05-applied-ml/06-responsible-ml.md
+          - Capstone: exercises/level-5-capstone.md
+  - Expert:
+      - tiers/expert.md
+      - "Level 6: Neural Networks from Scratch":
+          - chapters/06-neural-networks/index.md
+          - "From neurons to networks": chapters/06-neural-networks/01-from-neurons-to-networks.md
+          - "Forward and backpropagation": chapters/06-neural-networks/02-forward-and-backpropagation.md
+          - "A neural network in NumPy": chapters/06-neural-networks/03-neural-network-in-numpy.md
+          - "Optimizers": chapters/06-neural-networks/04-optimizers.md
+          - "Training deep networks": chapters/06-neural-networks/05-training-deep-networks.md
+          - "Autograd from scratch": chapters/06-neural-networks/06-autograd-from-scratch.md
+          - Capstone: exercises/level-6-capstone.md
+      - "Level 7: Deep Learning with PyTorch":
+          - chapters/07-deep-learning-pytorch/index.md
+          - "PyTorch fundamentals": chapters/07-deep-learning-pytorch/01-pytorch-fundamentals.md
+          - "The training loop": chapters/07-deep-learning-pytorch/02-the-training-loop.md
+          - "Convolutional neural networks": chapters/07-deep-learning-pytorch/03-convolutional-networks.md
+          - "Sequence models": chapters/07-deep-learning-pytorch/04-sequence-models.md
+          - "Embeddings and NLP basics": chapters/07-deep-learning-pytorch/05-embeddings-and-nlp.md
+          - "Transfer learning": chapters/07-deep-learning-pytorch/06-transfer-learning.md
+          - Capstone: exercises/level-7-capstone.md
+      - "Level 8: Modern Deep Learning":
+          - chapters/08-modern-deep-learning/index.md
+          - "Attention and transformers": chapters/08-modern-deep-learning/01-attention-and-transformers.md
+          - "Language models": chapters/08-modern-deep-learning/02-language-models.md
+          - "LLMs in practice": chapters/08-modern-deep-learning/03-llms-in-practice.md
+          - "Generative models": chapters/08-modern-deep-learning/04-generative-models.md
+          - "Self-supervised and multimodal learning": chapters/08-modern-deep-learning/05-self-supervised-and-multimodal.md
+          - "Scaling and efficiency": chapters/08-modern-deep-learning/06-scaling-and-efficiency.md
+          - "Reinforcement learning": chapters/08-modern-deep-learning/07-reinforcement-learning.md
+          - Capstone: exercises/level-8-capstone.md
+  - Capstones:
+      - exercises/index.md
+      - Solutions:
+          - "Level 0": exercises/solutions/level-0-capstone.md
+          - "Level 1": exercises/solutions/level-1-capstone.md
+          - "Level 2": exercises/solutions/level-2-capstone.md
+          - "Level 3": exercises/solutions/level-3-capstone.md
+          - "Level 4": exercises/solutions/level-4-capstone.md
+          - "Level 5": exercises/solutions/level-5-capstone.md
+          - "Level 6": exercises/solutions/level-6-capstone.md
+          - "Level 7": exercises/solutions/level-7-capstone.md
+          - "Level 8": exercises/solutions/level-8-capstone.md
+  - Cheat Sheets:
+      - cheatsheets/index.md
+      - "NumPy": cheatsheets/numpy.md
+      - "pandas": cheatsheets/pandas.md
+      - "Visualization": cheatsheets/visualization.md
+      - "Math notation": cheatsheets/math-notation.md
+      - "Probability and statistics": cheatsheets/probability-statistics.md
+      - "SQL": cheatsheets/sql.md
+      - "scikit-learn": cheatsheets/scikit-learn.md
+      - "Choosing a model": cheatsheets/choosing-a-model.md
+      - "Evaluation metrics": cheatsheets/metrics.md
+      - "PyTorch": cheatsheets/pytorch.md
+      - "Neural network recipes": cheatsheets/neural-network-recipes.md
+      - "Transformers and LLMs": cheatsheets/transformers-llms.md
+      - "Glossary": cheatsheets/glossary.md

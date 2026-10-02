@@ -1,0 +1,120 @@
+/* The ML Handbook: small polish on top of MkDocs Material.
+   Colors come from Material's CSS variables, so both the light
+   (default) and dark (slate) schemes work without extra rules. */
+
+/* A little more room for wide tables and code. */
+.md-grid {
+  max-width: 1440px;
+}
+
+/* ---------- Home page hero ---------- */
+.hero {
+  margin: 0 0 2rem;
+  padding: 2rem 1.5rem;
+  border-radius: 0.6rem;
+  background: linear-gradient(
+    135deg,
+    var(--md-primary-fg-color) 0%,
+    var(--md-primary-fg-color--dark) 100%
+  );
+  color: var(--md-primary-bg-color);
+}
+
+.hero h1,
+.hero h2 {
+  margin: 0 0 0.5rem;
+  color: var(--md-primary-bg-color);
+  font-weight: 700;
+}
+
+.hero p {
+  max-width: 46rem;
+  font-size: 0.95rem;
+}
+
+.hero .md-button {
+  margin: 0.5rem 0.5rem 0 0;
+  color: var(--md-primary-bg-color);
+  border-color: var(--md-primary-bg-color);
+}
+
+.hero .md-button--primary {
+  background-color: var(--md-accent-fg-color);
+  border-color: var(--md-accent-fg-color);
+  color: var(--md-accent-bg-color);
+}
+
+.hero .md-button:hover,
+.hero .md-button:focus {
+  background-color: var(--md-primary-bg-color);
+  border-color: var(--md-primary-bg-color);
+  color: var(--md-primary-fg-color);
+}
+
+.hero code {
+  background-color: rgba(0, 0, 0, 0.25);
+  color: var(--md-primary-bg-color);
+}
+
+
+/* ---------- Cheat sheets: keep dense tables readable ---------- */
+.md-typeset table:not([class]) {
+  font-size: 0.72rem;
+}
+
+/* Glossary (definition lists): make the terms stand out. */
+.md-typeset dl dt {
+  margin-top: 1rem;
+  font-weight: 700;
+  color: var(--md-primary-fg-color);
+}
+
+[data-md-color-scheme="slate"] .md-typeset dl dt {
+  color: var(--md-accent-fg-color);
+}
+
+/* Grid cards: a subtle lift on hover. */
+.md-typeset .grid.cards > ul > li {
+  transition: transform 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.md-typeset .grid.cards > ul > li:hover {
+  transform: translateY(-2px);
+}
+
+/* Small screens: smaller hero padding. */
+@media screen and (max-width: 44.9375em) {
+  .hero {
+    padding: 1.25rem 1rem;
+  }
+}
+
+/* Figures: center them, and keep captions close. */
+.md-typeset img {
+  display: block;
+  margin: 0 auto;
+  border-radius: 0.3rem;
+}
+
+.md-typeset img + em,
+.md-typeset p > em:only-child {
+  display: block;
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--md-default-fg-color--light);
+}
+
+/* Display math: scroll instead of overflowing on small screens. */
+.md-typeset .arithmatex {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+/* Tighten the space around display equations. */
+.md-typeset div.arithmatex {
+  margin: 0.4em 0;
+}
+
+.md-typeset .katex-display {
+  margin: 0.4em 0;
+}
