@@ -5,7 +5,7 @@
 You know classical ML. Now you'll go deep. First you'll build neural networks, and the automatic differentiation that trains them, from nothing but NumPy, so no part of deep learning is magic. Then you'll train real models in PyTorch, and finally study the architectures behind modern AI: transformers, large language models, diffusion models, and reinforcement learning.
 
 !!! info "This tier is being written"
-    The Beginner tier is complete. This tier's chapters are in progress: pages marked "Coming soon" list exactly what each chapter will cover. Start with the [Beginner tier](beginner.md) if you haven't already.
+    The Beginner and Intermediate tiers are complete. This tier's chapters are in progress: pages marked "Coming soon" list exactly what each chapter will cover. Work through the [Beginner](beginner.md) and [Intermediate](intermediate.md) tiers first.
 
 ## What you'll be able to do
 

@@ -21,7 +21,7 @@ A hands-on handbook that takes you from basic Python to a deep understanding of 
 ## Three tiers, nine levels
 
 !!! info "Status"
-    The **Beginner tier is complete**: Levels 0–2, 18 chapters with capstones. The Intermediate and Expert tiers are being written, and their pages show what each chapter will cover.
+    The **Beginner and Intermediate tiers are complete**: Levels 0–5, 39 chapters with capstones. The Expert tier is being written, and its pages show what each chapter will cover.
 
 The handbook has **58 chapters** in nine levels, grouped into three tiers. Each tier has a clear goal and a checkpoint that tells you when you're ready for the next one.
 

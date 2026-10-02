@@ -4,9 +4,6 @@
 
 You can analyze data. Now you'll learn how machines learn from it. You'll derive and implement the core algorithms from scratch so you know exactly what they do, master the model families that win on real-world tabular data, and then learn the engineering it takes to make a model reliable in production.
 
-!!! info "This tier is being written"
-    The Beginner tier is complete. This tier's chapters are in progress: pages marked "Coming soon" list exactly what each chapter will cover. Start with the [Beginner tier](beginner.md) if you haven't already.
-
 ## What you'll be able to do
 
 - Explain generalization, overfitting, the bias-variance trade-off, and regularization precisely.

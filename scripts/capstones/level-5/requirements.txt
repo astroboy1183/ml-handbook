@@ -1,0 +1,9 @@
+# Serving dependencies (installed in the Docker image). Pin exact versions:
+# the pickled pipeline must be loaded with the scikit-learn version it was trained with.
+fastapi==0.142.2
+uvicorn==0.54.0
+pydantic==2.13.5
+scikit-learn==1.9.1
+pandas==3.0.6
+numpy==2.5.3
+joblib==1.6.0
